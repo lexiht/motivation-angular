@@ -5,7 +5,15 @@ Lexi, Letian, Maria, Robin
 
 ##Technology
 + Framework: AngularJS
-+ Angular Modules: ui-router, Restangular, Materialize
+  + Routing: ui-router
+  + Resource handler:Restangular
+  + UI Framework: Materialize
+  + jQuery: 2.x
+  + Unit Test: Karma
+  + e2e test: Protractor
+  + CSS pre-processor: Sass
+  + JS pre-processor: none
+  + HTML pre-processor: none
 + Generator: Yeoman + gulp-angular generator
 
 ##Gulp Tasks
