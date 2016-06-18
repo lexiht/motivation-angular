@@ -15,6 +15,7 @@ Lexi, Letian, Maria, Robin
   + JS pre-processor: none
   + HTML pre-processor: none
 + Generator: Yeoman + gulp-angular generator
+    * https://github.com/Swiip/generator-gulp-angular/
 
 ##Gulp Tasks
 + `$gulp` or `$gulp build` to build an optimized version of your application in /dist
