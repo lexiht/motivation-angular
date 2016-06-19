@@ -20,6 +20,12 @@
         controller: 'registrationController',
         controllerAs: 'reg'
       });
+      .state('login',{
+        url: '/login',
+        templateUrl: 'app/login/login.html',
+        controller: 'loginController',
+        controllerAs: 'login'
+      });
 
     $urlRouterProvider.otherwise('/');
   }
