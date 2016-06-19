@@ -19,3 +19,10 @@
   }
 
 })();
+
+angular.module('motivationAngular', ['ng-token-auth'])
+  .config(function($authProvider) {
+      $authProvider.configure({
+          apiUrl: 'http://localhost:3000/api'
+      });
+  });

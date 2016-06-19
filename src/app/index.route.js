@@ -14,6 +14,12 @@
         controller: 'MainController',
         controllerAs: 'main'
       });
+      .state('registration',{
+        url: '/registration',
+        templateUrl: 'app/registration/registration.html',
+        controller: 'registrationController',
+        controllerAs: 'reg'
+      });
 
     $urlRouterProvider.otherwise('/');
   }
