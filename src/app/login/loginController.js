@@ -1,0 +1,1 @@
+angular.module("motivationAngular").controller("loginController", ["Restangular",function(Restangular,)])
