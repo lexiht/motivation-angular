@@ -3,10 +3,13 @@ angular.module("motivationAngular")
       $scope.handleRegBtnClick = function() {
         $auth.submitRegistration($scope.registrationForm)
           .then(function(resp) {
-            // handle success response
+            // store the returned token in local storage
+            // log in the user
+            // redirect to wish page
           })
           .catch(function(resp) {
             // handle error response
+            // use the returned error message to show user
           });
       };
   }]);
