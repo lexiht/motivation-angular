@@ -12,7 +12,7 @@
     //Set api route for ng-token-auth
     $authProvider.configure({
       apiUrl: 'http://localhost:3000/api',
-      storage: 'window.localStorage'
+      storage: 'localStorage'
     });
   }
 

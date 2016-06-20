@@ -21,26 +21,19 @@
 
 
     /** @ngInject */
-    function LoginController($scope, $location, $auth, $log, localStorageService) {
+    function LoginController($scope, $location, $auth, $log) {
         $log.log('LoginController');
         $scope.handleLoginBtnClick = function() {
           $auth.submitLogin($scope.loginForm)
             .then(function(resp) {
+              $log.log(resp);
               $log.log(window.localStorage);
-                return localStorageService.set('token', resp.data.access_token);
-                // app.run(['$rootScope', '$location', function($rootScope, $location) {
-                //   $rootScope.$on('auth:login-success', function(ev, user) {
-                //     $location.path('/');
-                    // alert('Welcome ', user.email);
-                //   });
-                // }]);
-
-                $log.log(resp);
+              alert('successful');
               // handle success response
             })
-            .catch(function() {
-                // $rootScope.$on('auth:login-error', function(ev, reason) {
-                  alert('auth failed because');
+            .catch(function(resp) {
+                $log.log(resp);
+                alert('auth failed');
                 // });
               // handle error response
             });
