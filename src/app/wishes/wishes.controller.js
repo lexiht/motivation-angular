@@ -6,14 +6,19 @@ angular
   .controller('WishesController', WishesController);
 
 /** @ngInject */
-  function WishesController($log, $scope) {
+  function WishesController($log, $scope, Restangular) {
     var vm = this;
 
+    var allWishes = Restangular.all('wishes');
+
+    allWishes.getList().then(function(wishes){
+      vm.wishes = wishes;
+    });
+
+    $log.log(vm.wishes);
     vm.createWish = function() {
-      $log.log($scope.wishesForm);
-
-
-
+      $log.log($scope.wishForm);
+      allWishes.post($scope.wishForm);
     };
 
     }
