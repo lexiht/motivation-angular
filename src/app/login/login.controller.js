@@ -21,7 +21,7 @@
 
 
     /** @ngInject */
-    function LoginController($location, $auth, $log, $scope, $window) {
+    function LoginController($location, $auth, $log, $scope) {
         $log.log('LoginController');
         var vm = this;
         vm.handleLoginBtnClick = function() {
