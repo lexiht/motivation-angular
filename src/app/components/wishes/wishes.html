@@ -1,0 +1,8 @@
+<div id=wishes>
+        {{WishesController.message}}
+        <p ng-repeat="wish in WishesController.allWishes">
+          {{wish.wish_text}}</br>
+          {{wish.outcome_text}}
+
+        </p>
+    </div>

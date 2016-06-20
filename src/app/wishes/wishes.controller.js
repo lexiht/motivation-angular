@@ -10,6 +10,9 @@ angular
     var vm = this;
 
     var allWishes = Restangular.all('wishes');
+      $log.log(allWishes);
+
+
 
     allWishes.getList().then(function(wishes){
       vm.wishes = wishes;
