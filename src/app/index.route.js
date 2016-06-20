@@ -25,6 +25,12 @@
         templateUrl: 'app/login/login.html',
         controller: 'LoginController',
         controllerAs: 'login'
+      })
+      .state('wishes',{
+        url: '/wishes',
+        templateUrl: 'app/wishes/wishes.html',
+        controller: 'WishesController',
+        controllerAs: 'wishes'
       });
       // .state('signout', {
       //   url: '/signout',
@@ -32,6 +38,7 @@
       //   controller: 'SignoutController',
       //   controllerAs: 'signout'
       // });
+
 
     $urlRouterProvider.otherwise('/');
   }
