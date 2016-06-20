@@ -12,13 +12,11 @@ angular
     var allWishes = Restangular.all('wishes');
       $log.log(allWishes);
 
-
-
     allWishes.getList().then(function(wishes){
-      vm.wishes = wishes;
+      // vm.wishes = wishes;
+      // need to iterate through the wishes object being returned
     });
 
-    $log.log(vm.wishes);
     vm.createWish = function() {
       $log.log($scope.wishForm);
       allWishes.post($scope.wishForm);
