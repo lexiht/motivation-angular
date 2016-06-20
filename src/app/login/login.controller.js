@@ -21,18 +21,17 @@
 
 
     /** @ngInject */
-    function LoginController($scope, $location, $auth, $log) {
+    function LoginController($location, $auth, $log, $scope, $window) {
         $log.log('LoginController');
-        $scope.handleLoginBtnClick = function() {
+        var vm = this;
+        vm.handleLoginBtnClick = function() {
           $auth.submitLogin($scope.loginForm)
             .then(function(resp) {
-              $log.log(resp);
-              $log.log(window.localStorage);
               alert('successful');
+              $location.path('/')
               // handle success response
             })
             .catch(function(resp) {
-                $log.log(resp);
                 alert('auth failed');
                 // });
               // handle error response
