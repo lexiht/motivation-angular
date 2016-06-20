@@ -17,12 +17,12 @@
                 email: $scope.registrationForm.email,
                 password: $scope.registrationForm.password
               });
-              $location.path('/')
+              $location.path('/');
               // handle success response
           })
           .catch(function(resp) {
               $log.log(resp);
-              alert("registration has failed")
+              alert("registration has failed");
               // handle error response
           });
       };
