@@ -6,20 +6,20 @@
     .controller('RegistrationController', RegistrationController);
 
     /** @ngInject */
-    function RegistrationController($scope, $location, $auth){
-      $scope.handleRegBtnClick = function() {
+    function RegistrationController($scope, $location, $auth, $log){
+     $log.log('signup controller');
+      $scope.doRegister = function(){
         $auth.submitRegistration($scope.registrationForm)
-          .then(function() {
-            $scope.$on('auth:registration-email-success', function(ev, message) {
-              alert("A registration email was sent to " + message.email);
-            });
+          .then(function(resp) {
+              alert("Registration success");
+              $log.log("response");
+              $log.log(resp);
+              // handle success response
           })
-          .catch(function() {
-            $scope.$on('auth:registration-email-error', function(ev, reason) {
-              alert("Registration failed: " + reason.errors[0]);
-            });
+          .catch(function(resp) {
+              $log.log(resp);
+              // handle error response
           });
       };
     }
-
 })();

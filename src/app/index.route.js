@@ -17,8 +17,8 @@
       .state('registration',{
         url: '/registration',
         templateUrl: 'app/registration/registration.html',
-        controller: 'registrationController',
-        controllerAs: 'reg'
+        controller: 'RegistrationController',
+        controllerAs: 'regctrl'
       })
       .state('login',{
         url: '/login',
