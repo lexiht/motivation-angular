@@ -11,15 +11,9 @@
     $logProvider.debugEnabled(true);
     //Set api route for ng-token-auth
     $authProvider.configure({
-      apiUrl: 'http://localhost:3000/api'
+      apiUrl: 'http://localhost:3000/api',
+      storage: 'localStorage'
     });
   }
 
 })();
-
-// angular.module('motivationAngular', ['ng-token-auth'])
-//   .config(function($authProvider) {
-//     $authProvider.configure({
-//         apiUrl: 'http://localhost:3000/api'
-//     });
-//   });

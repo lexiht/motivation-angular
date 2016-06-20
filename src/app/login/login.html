@@ -2,7 +2,7 @@
   <acme-navbar creation-date="main.creationDate"></acme-navbar>
 </header>
 
-<form ng-submit="submitLogin(loginForm)" role="form" ng-init="loginForm = {}">
+<form role="form" ng-init="loginForm = {}">
   <div class="form-group">
     <label for="email">Email</label>
     <input type="email" name="email" ng-model="loginForm.email" required="required" class="form-control">
@@ -13,5 +13,5 @@
     <input type="password" name="password" ng-model="loginForm.password" required="required" class="form-control">
   </div>
 
-  <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+  <button type="submit" class="btn btn-primary btn-lg" ng-click="login.handleLoginBtnClick()">Sign in</button>
 </form>

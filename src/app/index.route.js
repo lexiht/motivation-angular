@@ -18,12 +18,12 @@
         url: '/registration',
         templateUrl: 'app/registration/registration.html',
         controller: 'RegistrationController',
-        controllerAs: 'regctrl'
+        controllerAs: 'reg'
       })
       .state('login',{
         url: '/login',
         templateUrl: 'app/login/login.html',
-        controller: 'loginController',
+        controller: 'LoginController',
         controllerAs: 'login'
       });
 

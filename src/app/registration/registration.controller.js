@@ -6,14 +6,18 @@
     .controller('RegistrationController', RegistrationController);
 
     /** @ngInject */
-    function RegistrationController($scope, $location, $auth, $log){
+    function RegistrationController($location, $auth, $log,$scope){
      $log.log('Registration controller');
-      $scope.doRegister = function(){
+      var vm = this;
+      vm.doRegister = function(){
         $auth.submitRegistration($scope.registrationForm)
           .then(function(resp) {
               alert("Registration success");
-              $log.log("response");
-              $log.log(resp);
+              $auth.submitLogin({
+                email: $scope.registrationForm.email,
+                password: $scope.registrationForm.password
+              });
+              $location.path('/')
               // handle success response
           })
           .catch(function(resp) {
