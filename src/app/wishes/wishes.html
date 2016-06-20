@@ -1,0 +1,17 @@
+<header class="mdl-layout__header">
+  <acme-navbar creation-date="main.creationDate"></acme-navbar>
+</header>
+
+<form role="form" ng-init="wishForm = {}">
+  <div class="form-group">
+    <label for="wish">Add a new wish:</label>
+    <input type="wish" name="wish" ng-model="wishForm.wish" required="required" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="outcome">What is your outcome?</label>
+    <input type="outcome" name="outcome" ng-model="wishForm.outcome" required="required" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-lg" ng-click="wishes.createWish()">Add your wish</button>
+</form>

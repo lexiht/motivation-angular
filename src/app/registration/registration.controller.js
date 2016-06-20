@@ -17,7 +17,7 @@
                 email: $scope.registrationForm.email,
                 password: $scope.registrationForm.password
               });
-              $location.path('/')
+              $location.path('/');
               // handle success response
           })
           .catch(function(resp) {
