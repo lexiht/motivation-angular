@@ -7,7 +7,7 @@
 
     /** @ngInject */
     function RegistrationController($scope, $location, $auth, $log){
-     $log.log('signup controller');
+     $log.log('Registration controller');
       $scope.doRegister = function(){
         $auth.submitRegistration($scope.registrationForm)
           .then(function(resp) {
@@ -18,6 +18,7 @@
           })
           .catch(function(resp) {
               $log.log(resp);
+              alert("registration has failed")
               // handle error response
           });
       };
