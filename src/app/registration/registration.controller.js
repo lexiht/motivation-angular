@@ -12,6 +12,10 @@
         $auth.submitRegistration($scope.registrationForm)
           .then(function(resp) {
               alert("Registration success");
+              $auth.submitLogin({
+                email: $scope.registrationForm.email,
+                password: $scope.registrationForm.password
+              });
               $log.log("response");
               $log.log(resp);
               // handle success response
