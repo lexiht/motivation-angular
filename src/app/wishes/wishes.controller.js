@@ -11,11 +11,10 @@ angular
     vm.wishes = [];
 
     var allWishes = Restangular.all('wishes');
-    $log.log(allWishes);
 
     allWishes.getList().then(function(response){
+      $log.log(response);
       response.forEach(function(wish){
-        $log.log(wish.wish_text);
         var singleWish = new wishFactory(wish.wish_text, wish.outcome_text);
         vm.wishes.push(singleWish);
       });
