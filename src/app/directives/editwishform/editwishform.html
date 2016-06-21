@@ -1,15 +1,15 @@
 <button ng-click="vm.isEditFormOpen = !vm.isEditFormOpen">Edit</button>
-<div ng-show="vm.isEditFormOpen" id="wishEditForm">
+<div ng-show="vm.isEditFormOpen">
   <form role="form" ng-init="wishEditForm = {}">
     <div class="form-group">
       <label for="wish">Edit your wish:</label>
-      <input type="text" name="wish_text" ng-model="wishFormEdit.wish_text" required="required" class="form-control">
+      <input type="text" name="wish_text" ng-model="wishEditForm.wish_text" required="required" class="form-control">
     </div>
 
     <div class="form-group">
-      <label for="outcome">Edit your outcome?</label>
-      <input type="text" name="outcome_text" ng-model="wishFormEdit.outcome_text" required="required" class="form-control">
+      <label for="outcome">Edit your outcome:</label>
+      <input type="text" name="outcome_text" ng-model="wishEditForm.outcome_text" required="required" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.log(wish.id)">Submit change</button>
+    <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.editWish()">Submit change</button>
   </form>
 </div>

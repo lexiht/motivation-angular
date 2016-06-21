@@ -17,7 +17,6 @@ angular
       response.forEach(function(wish){
         // var singleWish = new wishFactory(wish.wish_text, wish.outcome_text);
         // vm.wishes.push(singleWish);
-        $log.log(wish);
         vm.wishes.push(wish);
       });
     });
