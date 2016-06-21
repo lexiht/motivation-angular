@@ -3,13 +3,13 @@
 
 	angular
 		.module('motivationAngular')
-		.directive('addObstaclesForm', addObstacles);
+		.directive('addObstacleForm', addObstacleForm);
 
 	/** @ngInject */
-	function addObstacles() {
+	function addObstacleForm() {
 		var directive = {
 			restrict: 'E',
-			templateUrl: 'app/directives/addObstacles/addObstacleForm.html',
+			templateUrl: 'app/directives/Obstacles/addObstacleForm.html',
 			scope: {
 				wishid: '@'
 			},
@@ -24,6 +24,9 @@
 		function addObstacleFormController($log, $scope, Restangular, $state) {
 			var vm = this;
 
+			var allObstacles = Restangular.one("wishes",vm.wishid).all("obstacles");
+
+
 			vm.isAddObstacleOpen = false;
 
 			Restangular.one('wishes', vm.wishid).get().then(function(resp) {
@@ -32,11 +35,9 @@
 			});
 
 			vm.addObstacle = function() {
-				vm.currentWish.obstacle_text = $scope.addObstacleForm.obstacle_text;
-				vm.currentWish.plan_text = $scope.addObstacleForm.plan_text;
-				vm.currentWish.post();
+				allObstacles.post($scope.addObstacleForm);
 				$state.reload();
-			}
+			};
 		}
 	}
 })();
