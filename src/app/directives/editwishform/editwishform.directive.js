@@ -21,7 +21,7 @@
       return directive;
 
       /** @ngInject */
-      function editWishFormController($log, $scope, Restangular) {
+      function editWishFormController($log, $scope, Restangular, $state) {
         var vm = this;
 
         vm.isEditFormOpen = false;
@@ -32,10 +32,10 @@
         });
 
         vm.editWish = function(){
-          $log.log($scope.wishEditForm.wish_text);
           vm.currentWish.wish_text = $scope.wishEditForm.wish_text;
           vm.currentWish.outcome_text = $scope.wishEditForm.outcome_text;
           vm.currentWish.put();
+          $state.reload();
         }
       }
 

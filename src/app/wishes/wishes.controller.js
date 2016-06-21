@@ -6,7 +6,7 @@ angular
   .controller('WishesController', WishesController);
 
 /** @ngInject */
-  function WishesController($log, $scope, Restangular,wishFactory) {
+  function WishesController($log, $scope, Restangular,wishFactory, $state) {
     var vm = this;
     vm.wishes = [];
 
@@ -24,6 +24,7 @@ angular
 
     vm.createWish = function() {
       allWishes.post($scope.wishForm);
+      $state.reload();
     };
 
     }
