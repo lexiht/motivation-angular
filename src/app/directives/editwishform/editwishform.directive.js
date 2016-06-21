@@ -25,6 +25,8 @@
         var vm = this;
         var allWishes = Restangular.all('wishes');
 
+        var isEditFormOpen = false;
+
       }
 
     }
