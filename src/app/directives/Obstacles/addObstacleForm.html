@@ -1,0 +1,15 @@
+<button ng-click="vm.isAddObstacleOpen = !vm.isAddObstacleOpen">Add Obstacle</button>
+<div ng-show="vm.isAddObstacleOpen">
+  <form role="form" ng-init="addObstacleForm = {}">
+    <div class="form-group">
+      <label for="obstacle">Add Obstacle to wish:</label>
+      <input type="text" name="obstacle_text" ng-model="addObstacleForm.obstacle_text" required="required" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="plan">Add plan to obstacle:</label>
+      <input type="text" name="plan_text" ng-model="addObstacleForm.obstacle_text" required="required" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.addObstacle()">Submit Obstacle</button>
+  </form>
+</div>
