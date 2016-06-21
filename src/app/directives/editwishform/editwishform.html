@@ -1,4 +1,6 @@
-<button ng-click="vm.isEditFormOpen = !vm.isEditFormOpen">Edit</button>
+
+<button ng-click="vm.isEditFormOpen = !vm.isEditFormOpen">Edit Wish</button>
+<button ng-click="vm.deleteWish()">Delete Wish</button>
 <div ng-show="vm.isEditFormOpen">
   <form role="form" ng-init="wishEditForm = {}">
     <div class="form-group">
