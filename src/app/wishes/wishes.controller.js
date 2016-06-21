@@ -21,7 +21,6 @@ angular
       });
     });
 
-
     vm.createWish = function() {
       allWishes.post($scope.wishForm);
       $state.reload();
