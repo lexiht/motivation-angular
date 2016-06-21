@@ -15,3 +15,8 @@
 
   <button type="submit" class="btn btn-primary btn-lg" ng-click="wishes.createWish()">Add your wish</button>
 </form>
+
+<div ng-repeat="wish in wishes.wishes">
+  Wish: {{wish.wish_text}}<br>
+  Outcome: {{wish.outcome_text}}
+</div>
