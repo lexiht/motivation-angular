@@ -19,4 +19,7 @@
 <div ng-repeat="wish in wishes.wishes">
   Wish: {{wish.wish_text}}<br>
   Outcome: {{wish.outcome_text}}
+
+  <edit-wish-form wishid="{{wish.id}}"> </edit-wish-form>
+
 </div>

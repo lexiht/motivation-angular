@@ -45,6 +45,8 @@
       return false;
     };
 
+    
+
       // "vm.creationDate" is available by directive option "bindToController: true"
     }
   }
