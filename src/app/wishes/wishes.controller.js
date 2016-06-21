@@ -8,6 +8,7 @@ angular
 /** @ngInject */
   function WishesController($log, $scope, Restangular) {
     var vm = this;
+    this.wishes = [];
 
     var allWishes = Restangular.all('wishes');
       $log.log(allWishes);
