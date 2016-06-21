@@ -11,7 +11,7 @@
         restrict: 'E',
         templateUrl: 'app/directives/editwishform/editwishform.html',
         scope: {
-          wish_id: "="
+          wishid: "@"
         },
         controller: editWishFormController,
         controllerAs: 'vm',
@@ -25,9 +25,6 @@
         var vm = this;
         var allWishes = Restangular.all('wishes');
 
-        vm.log = function(id){
-          $log.log(id);
-        }
       }
 
     }
