@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($auth,$location) {
+    function NavbarController($auth,$location,$window) {
       var vm = this;
       vm.handleSignOutBtnClick = function() {
       $auth.signOut()
@@ -34,6 +34,15 @@
           alert('log out failed');
           // handle error response
         });
+
+    };
+
+    vm.isSigned = function() {
+      var isSigned =  $window.localStorage.auth_headers;
+      if (isSigned) {
+        return true ;
+      }
+      return false;
     };
 
       // "vm.creationDate" is available by directive option "bindToController: true"

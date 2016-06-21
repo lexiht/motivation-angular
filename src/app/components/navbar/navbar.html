@@ -4,10 +4,27 @@
   <!-- Add spacer, to align navigation to the right -->
   <nav class="mdl-navigation mdl-layout--large-screen-only">
     <a class="mdl-navigation__link" href="#">Home</a>
-    <a class="mdl-navigation__link" href="#/login">Login</a>
-    <a class="mdl-navigation__link" href="#/registration">Register</a>
-    <button type="submit" ng-click='vm.handleSignOutBtnClick()'>Sign out</button>
-    <a class="mdl-navigation__link" href="#/wishes">Add Wish</a>
+
+    <div ng-hide=vm.isSigned()>
+      <a class="mdl-navigation__link" href="#/login">Login</a>
+    </div>
+
+    <div ng-hide=vm.isSigned()>
+      <a class="mdl-navigation__link" href="#/registration">Register</a>
+    </div>
+
+    <div ng-show="vm.isSigned()">
+      <a class="mdl-navigation__link" href="#/wishes">Add Wish</a>
+    </div>
+
+    <div ng-show="vm.isSigned()">
+      <button type="submit" ng-click='vm.handleSignOutBtnClick()'>Sign out</button>
+    </div>
+
+
+
+
+
   </nav>
   <!-- Add spacer, to align navigation to the right -->
   <div class="mdl-layout-spacer"></div>
