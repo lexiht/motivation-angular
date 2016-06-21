@@ -6,17 +6,14 @@ angular
   .controller('WishesController', WishesController);
 
 /** @ngInject */
-  function WishesController($log, $scope, Restangular,wishFactory, $state) {
+  function WishesController($log, $scope, Restangular, $state) {
     var vm = this;
     vm.wishes = [];
 
     var allWishes = Restangular.all('wishes');
 
     allWishes.getList().then(function(response){
-      $log.log(response);
       response.forEach(function(wish){
-        // var singleWish = new wishFactory(wish.wish_text, wish.outcome_text);
-        // vm.wishes.push(singleWish);
         vm.wishes.push(wish);
       });
     });
