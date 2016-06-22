@@ -3,17 +3,18 @@
 
     angular
         .module('motivationAngular')
-        .directive('obstacleForm', obstacleForm);
+        .directive('addObstacleForm', addObstacleForm);
 
     /** @ngInject */
     function addObstacleForm() {
         var directive = {
             restrict: 'E',
-            templateUrl: 'app/directives/Obstacles/obstacleForm.html',
+            templateUrl: 'app/directives/Obstacles/addObstacleForm.html',
             scope: {
-                wishid: '@'
+                wishid: '@',
+                obstacleid: '@'
             },
-            controller: obstacleFormController,
+            controller: addObstacleFormController,
             controllerAs: 'vm',
             bindToController: true
         };
@@ -21,27 +22,29 @@
         return directive;
 
         /** @ngInject */
-        function obstacleFormController($log, $scope, Restangular, $state) {
+        function addObstacleFormController($log, $scope, Restangular, $state) {
             var vm = this;
             vm.obstacles = [];
 
+
             var allObstacles = Restangular.one("wishes",vm.wishid).all("obstacles");
-            var currentObstacle = Restangular.one("wishes", vm.wishid).one("obstacles", vm.obstacleid);
+
 
             vm.isAddObstacleOpen = false;
             vm.isShowObstacleOpen = false;
-            vm.isEditObstacleOpen = false;
 
-            Restangular.one('wishes', vm.wishid).get().then(function(resp) {
-                $log.log(resp);
+
+            Restangular.one('wishes', vm.wishid ).get().then(function(resp) {
                 vm.currentWish = resp;
             });
 
+            $log.log(vm.obstacleid);
+
+
+
             allObstacles.getList().then(function(response){
-                $log.log(response);
                 response.forEach(function(obstacle){
                     vm.obstacles.push(obstacle);
-                    $log.log(vm.obstacles);
                 });
             });
 
@@ -50,12 +53,6 @@
                 $state.reload();
             };
 
-            vm.editObstacle = function() {
-                vm.currentObstacle.obstacle_text = $scope.editObstacleForm.obstacle_text;
-                vm.currentObstacle.plan_text = $scope.editObstacleForm.plan_text;
-                vm.currentObstacle.put();
-                $state.reload();
-            };
         }
     }
 })();

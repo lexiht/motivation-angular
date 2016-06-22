@@ -14,27 +14,12 @@
   </form>
 </div>
 
-<button ng-click="vm.isEditObstacleOpen = !vm.isEditObstacleOpen">Edit Obstacle</button>
-<div ng-show="vm.isEditObstacleOpen">
-  <form role="form" ng-init="editObstacleForm = {}">
-    <div class="form-group">
-      <label for="obstacle">Edit Obstacle in wish:</label>
-      <input type="text" name="obstacle_text" ng-model="editObstacleForm.obstacle_text" required="required" class="form-control">
-    </div>
-
-    <div class="form-group">
-      <label for="plan">Edit plan in obstacle:</label>
-      <input type="text" name="plan_text" ng-model="editObstacleForm.plan_text" required="required" class="form-control">
-    </div>
-    <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.editObstacle()">Update Obstacle</button>
-  </form>
-</div>
-
 
 <button ng-click="vm.isShowObstacleOpen = !vm.isShowObstacleOpen">Show Obstacles</button>
   <div ng-show="vm.isShowObstacleOpen">
     <div ng-repeat="obstacle in vm.obstacles">
       Obstacle: {{obstacle.obstacle_text}}<br>
       Plan: {{obstacle.plan_text}}<br>
+      <edit-obstacle-form wishid="{{obstacle.wish_id}}" obstacleid="{{obstacle.id}}"></edit-obstacle-form>
     </div>
 </div>

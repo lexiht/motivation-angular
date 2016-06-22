@@ -1,0 +1,15 @@
+<button ng-click="vm.isEditObstacleOpen = !vm.isEditObstacleOpen">Edit Obstacle</button>
+<div ng-show="vm.isEditObstacleOpen">
+  <form role="form" ng-init="obstacleEditForm = {}" obstacleid="{{obstacle.id}}">
+    <div class="form-group">
+      <label for="obstacle">Edit Obstacle in wish:</label>
+      <input type="text" name="obstacle_text" ng-model="obstacleEditForm.obstacle_text" required="required" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="plan">Edit plan in obstacle:</label>
+      <input type="text" name="plan_text" ng-model="obstacleEditForm.plan_text" required="required" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.editObstacle()">Update Obstacle</button>
+  </form>
+</div>
