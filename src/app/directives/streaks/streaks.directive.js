@@ -3,16 +3,16 @@
 
   angular
     .module('motivationAngular')
-    .directive('Streak', Streak);
+    .directive('streak', streak);
 
     /** @ngInject */
-    function Streak(){
+    function streak(){
       var directive = {
         restrict: 'E',
         templateUrl: 'app/directives/streaks/streaks.html',
         scope: {
           wishid: "@",
-          //obstacleid: "@"
+          obstacleid: "@"
         },
         controller: StreaksController,
         controllerAs: 'vm',
@@ -22,14 +22,19 @@
       return directive;
 
       /** @ngInject */
-      function StreakController($log, $scope, Restangular, $state) {
+      function StreaksController($log, $scope, Restangular, $state) {
         var vm = this;
+        vm.streakDays = 0;
 
-        var allStreaks = Restangular.one('wishes',wishid).one('obstacles',obstacleid).all('streaks');
+        Restangular.one('wishes',vm.wishid).one('obstacles',vm.obstacleid).all('streaks').getList().then(function(streaks){
+          vm.streaks = streaks;
+          $log.log(streaks);
+        });
 
-        allStreaks.getList.then(function(resp){
+
+        allStreaks.getList().then(function(resp){
           vm.streakDays = countStreak(resp);
-        })
+        });
 
         vm.isSuccessful = true;
 
@@ -49,7 +54,7 @@
             }
           }
           return count;
-        };
+        }
       }
     }
   })();
