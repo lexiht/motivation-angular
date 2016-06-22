@@ -50,7 +50,7 @@
   },
   "scripts": {
     "start": "node app",
-    "postinstall": "gulp default"
+    "postinstall": "gulp"
   },
   "devDependencies": {},
   "engines": {
