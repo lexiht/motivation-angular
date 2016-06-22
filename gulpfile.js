@@ -30,7 +30,7 @@ gulp.task('default', ['clean'], function () {
 
 gulp.task('serveprod', function() {
   connect.server({
-    root: ["/"],
+    root: ["/Users/robin_heathcote/Projects/Makers Academy/Week10/motivation-angular"],
     port: process.env.PORT || 5000, // localhost:5000
     livereload: false
   });
