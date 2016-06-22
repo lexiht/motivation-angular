@@ -13,3 +13,12 @@
     <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.addObstacle()">Submit Obstacle</button>
   </form>
 </div>
+
+
+<button ng-click="vm.isShowObstacleOpen = !vm.isShowObstacleOpen">Show Obstacles</button>
+  <div ng-show="vm.isShowObstacleOpen">
+    <div ng-repeat="obstacle in vm.obstacles">
+      Obstacle: {{obstacle.obstacle_text}}<br>
+      Plan: {{obstacle.plan_text}}<br>
+    </div>
+</div>

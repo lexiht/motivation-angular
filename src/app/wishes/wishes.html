@@ -19,9 +19,6 @@
 <div ng-repeat="wish in wishes.wishes">
   Wish: {{wish.wish_text}}<br>
   Outcome: {{wish.outcome_text}}<br>
-  Obstacle: {{wish.allObstacles.obstacle_text}}<br>
-  Plan: {{wish.allObstacles.plan_text}}<br>
-
   <edit-wish-form wishid="{{wish.id}}"> </edit-wish-form>
   <add-obstacle-form wishid="{{wish.id}}"></add-obstacle-form>
 </div>
