@@ -42,7 +42,8 @@
           vm.currentWish.remove();
           $state.reload();
         };
+
       }
 
     }
-})();_
+})();
