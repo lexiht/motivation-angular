@@ -11,10 +11,10 @@
     $logProvider.debugEnabled(true);
     //Set api route for ng-token-auth
     $authProvider.configure({
-      apiUrl: 'http://localhost:3000/api',
+      apiUrl: 'https://motivation-api.herokuapp.com/api',
       storage: 'localStorage'
     });
-    RestangularProvider.setBaseUrl('http://localhost:3000/api');
+    RestangularProvider.setBaseUrl('https://motivation-api.herokuapp.com/api');
 
   }
 
