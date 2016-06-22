@@ -9,8 +9,10 @@ angular
   function WishesController($log, $scope, Restangular, $state) {
     var vm = this;
     vm.wishes = [];
+    vm.obstacles = [];
 
     var allWishes = Restangular.all('wishes');
+
 
     allWishes.getList().then(function(response){
       response.forEach(function(wish){
@@ -22,6 +24,5 @@ angular
       allWishes.post($scope.wishForm);
       $state.reload();
     };
-
-    }
-  })();
+  }
+})();
