@@ -51,7 +51,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "postinstall": "gulp prod"
+    "postinstall": "gulp"
   },
   "devDependencies": {},
   "engines": {
