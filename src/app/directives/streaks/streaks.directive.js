@@ -35,7 +35,7 @@
 
         vm.submitResult = function(){
           allStreaks.post(vm.isSuccessful);
-          $state.reload;
+          $state.reload();
         };
 
         function countStreak(streakArray){
