@@ -1,4 +1,5 @@
 <button ng-click="vm.isEditObstacleOpen = !vm.isEditObstacleOpen">Edit Obstacle</button>
+<button ng-click="vm.deleteObstacle()">Delete Obstacle</button>
 <div ng-show="vm.isEditObstacleOpen">
   <form role="form" ng-init="obstacleEditForm = {}" obstacleid="{{obstacle.id}}">
     <div class="form-group">

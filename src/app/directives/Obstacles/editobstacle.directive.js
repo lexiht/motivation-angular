@@ -41,6 +41,11 @@
         vm.currentObstacle.put();
         $state.reload();
       };
+
+      vm.deleteObstacle = function() {
+        vm.currentObstacle.remove();
+        $state.reload();
+      };
     }
   }
 })();
