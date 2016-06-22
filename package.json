@@ -49,7 +49,7 @@
     "yo": "^1.8.4"
   },
   "scripts": {
-    "start": "node app",
+    "start": "node motivation-angular",
     "postinstall": "gulp"
   },
   "devDependencies": {},
