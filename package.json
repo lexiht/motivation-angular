@@ -1,11 +1,7 @@
 {
   "name": "motivationAngular",
   "version": "0.0.0",
-  "dependencies": {},
-  "scripts": {
-    "test": "gulp test"
-  },
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "~2.9.11",
     "browser-sync-spa": "~1.0.3",
     "chalk": "~1.1.1",
@@ -50,6 +46,16 @@
     "wiredep": "~2.2.2",
     "wrench": "~1.5.8",
     "yo": "^1.8.4"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "scripts": {
+  "start": "node app",
+  "postinstall": "gulp default"
+  },
+  "devDependencies": {
+
   },
   "engines": {
     "node": ">=0.10.0"
