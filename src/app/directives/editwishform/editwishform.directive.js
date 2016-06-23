@@ -34,7 +34,7 @@
           vm.currentWish.wish_text = $scope.wishEditForm.wish_text;
           vm.currentWish.outcome_text = $scope.wishEditForm.outcome_text;
           vm.currentWish.put();
-          $state.reload();
+          $state.reload($state.current.name);
         };
 
         vm.deleteWish = function(){
