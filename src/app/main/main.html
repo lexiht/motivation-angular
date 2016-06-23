@@ -4,15 +4,11 @@
     <acme-navbar></acme-navbar>
   </header>
 
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Navigation</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Wishes</a>
-    </nav>
-  </div>
-
   <main class="mdl-layout__content">
-
+    <div ng-repeat="wish in wishes.wishes">
+      Wish: {{wish.wish_text}}<br>
+      Outcome: {{wish.outcome_text}}<br>
+    </div>
   </main>
 
   <footer class="mdl-mini-footer">
