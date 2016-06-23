@@ -7,11 +7,10 @@
 
     /** @ngInject */
     function RegistrationController($location, $auth, $log,$scope){
-     $log.log('Registration controller');
       var vm = this;
       vm.doRegister = function(){
         $auth.submitRegistration($scope.registrationForm)
-          .then(function(resp) {
+          .then(function() {
               alert("Registration success");
               $auth.submitLogin({
                 email: $scope.registrationForm.email,
@@ -20,8 +19,7 @@
               $location.path('/');
               // handle success response
           })
-          .catch(function(resp) {
-              $log.log(resp);
+          .catch(function() {
               alert("registration has failed");
               // handle error response
           });
