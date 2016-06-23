@@ -50,10 +50,6 @@
     "wrench": "~1.5.8",
     "yo": "^1.8.4"
   },
-  "scripts": {
-    "start": "node_modules/gulp/bin/gulp",
-    "postinstall": "bower install && gulp build"
-  },
   "devDependencies": {},
   "engines": {
     "node": "5.11.1",
