@@ -4,21 +4,6 @@
   angular
     .module('motivationAngular')
     .controller('LoginController', LoginController);
-// ["restangular","$auth",function(restangular,$auth){
-
-
-  // self.username = "";
-  // self.password = "";
-  //
-  // self.user = current_user.profile;
-  //
-  // self.login = function(form){
-  //   if (form.$valid){
-  //
-  //   }
-  // }
-
-
 
     /** @ngInject */
     function LoginController($location, $auth, $log, $scope) {
@@ -26,14 +11,13 @@
         var vm = this;
         vm.handleLoginBtnClick = function() {
           $auth.submitLogin($scope.loginForm)
-            .then(function(resp) {
+            .then(function() {
               alert('successful');
               $location.path('/')
               // handle success response
             })
-            .catch(function(resp) {
+            .catch(function() {
                 alert('auth failed');
-                // });
               // handle error response
             });
         };

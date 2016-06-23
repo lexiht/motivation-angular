@@ -1,14 +1,14 @@
-(function() {
-  'use strict';
+// (function() {
+//   'use strict';
 
-  describe('controllers', function(){
-    var vm;
+//   describe('controllers', function(){
+//     var vm;
 
-    beforeEach(module('motivationAngular'));
-    beforeEach(inject(function(_$controller_) {
+//     beforeEach(module('motivationAngular'));
+//     beforeEach(inject(function(_$controller_) {
 
-      vm = _$controller_('MainController');
-    }));
+//       // vm = _$controller_('MainController');
+//     }));
 
-  });
-})();
+//   });
+// })();

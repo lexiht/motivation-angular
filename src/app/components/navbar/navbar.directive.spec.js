@@ -21,7 +21,7 @@
       timeInMs = timeInMs.setHours(timeInMs.getHours() - 24);
 
       el = angular.element('<acme-navbar creation-date="' + timeInMs + '"></acme-navbar>');
-
+      vm.message = "hello";
       $compile(el)($rootScope.$new());
       $rootScope.$digest();
       vm = el.isolateScope().vm;
@@ -32,9 +32,5 @@
       expect(el.html()).not.toEqual(null);
     });
 
-    // it('should call Moment', function() {
-    //   console.log($window.moment)
-    //   expect($window.moment).toHaveBeenCalled();
-    // });
   });
 })();
