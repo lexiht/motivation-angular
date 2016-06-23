@@ -52,7 +52,7 @@
   },
   "scripts": {
     "start": "node_modules/gulp/bin/gulp",
-    "postinstall": "gulp"
+    "postinstall": "bower install && gulp build"
   },
   "devDependencies": {},
   "engines": {
