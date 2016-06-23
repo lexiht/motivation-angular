@@ -5,17 +5,17 @@
 <div class="row">
   <form class="col s6" role="form" ng-init="loginForm = {}">
     <div class="row">
-      <div class="input-field col s6">
+      <div class="input-field col s6 offset-s9">
         <input placeholder="Email" type="email" name="email" ng-model="loginForm.email" required="required">
       </div>
     </div>
 
     <div class="row">
-      <div class="input-field col s6">
+      <div class="input-field col s6 offset-s9">
         <input placeholder="Password" type="password" name="password" ng-model="loginForm.password" required="required">
       </div>
     </div>
 
-    <button class="waves-effect waves-light btn" type="submit" ng-click="login.handleLoginBtnClick()">Sign in</button>
+    <button class="waves-effect waves-light btn col s6 offset-s9" type="submit" ng-click="login.handleLoginBtnClick()">Sign in</button>
   </form>
 </div>

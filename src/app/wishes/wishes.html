@@ -2,19 +2,22 @@
   <acme-navbar></acme-navbar>
 </header>
 
-<div class="row">
-  <form class="col s6" role="form" ng-init="wishForm = {}">
-    <div class="row">
-      <div class="input-field col s6">
-        <input placeholder="Add a new wish" type="text" name="wish_text" ng-model="wishForm.wish_text" required="required">
+  <div class="row section">
+    <form class="col s6" role="form" ng-init="wishForm = {}">
+      <div class="row">
+        <div class="input-field col s6 offset-s9">
+          <input placeholder="Add a new wish" type="text" name="wish_text" ng-model="wishForm.wish_text" required="required">
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="input-field col s6">
-        <input placeholder="What is your outcome?" type="text" name="outcome_text" ng-model="wishForm.outcome_text" required="required">
+      <div class="row">
+        <div class="input-field col s6 offset-s9">
+          <input placeholder="What is your outcome?" type="text" name="outcome_text" ng-model="wishForm.outcome_text" required="required">
+        </div>
       </div>
-    </div>
+      <button class="waves-effect waves-light btn col s6 offset-s9" type="submit" ng-click="wishes.createWish()">Add your wish</button>
+    </form>
+  </div>
 
     <button class="waves-effect waves-light btn" type="submit" ng-click="wishes.createWish()">Add your wish</button>
   </form>
