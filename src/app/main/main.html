@@ -3,8 +3,7 @@
   <header>
     <acme-navbar></acme-navbar>
   </header>
-
-  <main>
+  <main class="background">
     <div ng-repeat="wish in wishes.wishes">
       Wish: {{wish.wish_text}}<br>
       Outcome: {{wish.outcome_text}}<br>
@@ -13,11 +12,9 @@
 
   <div class="footer-copyright">
     <div class="container">
-      © 2016 Copyright 
+      <p class="copy">© 2016 Copyright</p>
       <div class="right">
-        Creators <acme-malarkey></acme-malarkey>
+        <span>Creators</span> <acme-malarkey></acme-malarkey>
       </div>
     </div>
-  </footer>
-
-</div>
+  </div>

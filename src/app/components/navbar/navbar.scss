@@ -12,6 +12,15 @@ h1 {
   line-height: 1.25em;
 }
 
-a:hover, a:focus {
-  color: greenyellow;
+// a:hover, a:focus {
+//   color: greenyellow;
+// }
+
+.nav-wrapper {
+  .brand-logo {
+    padding-left: 4%;
+  }
+  li {
+    line-height: 64px;
+  }
 }
