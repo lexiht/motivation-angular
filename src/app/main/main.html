@@ -1,19 +1,20 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<div>
 
-  <header class="mdl-layout__header">
+  <header>
     <acme-navbar></acme-navbar>
   </header>
 
-  <main class="mdl-layout__content">
+  <main>
     <div ng-repeat="wish in wishes.wishes">
       Wish: {{wish.wish_text}}<br>
       Outcome: {{wish.outcome_text}}<br>
     </div>
   </main>
 
-  <footer class="mdl-mini-footer">
-    <div class="mdl-mini-footer__right-section">
-      <div class="mdl-logo">
+  <div class="footer-copyright">
+    <div class="container">
+      © 2016 Copyright 
+      <div class="right">
         Creators <acme-malarkey></acme-malarkey>
       </div>
     </div>
