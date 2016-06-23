@@ -9,7 +9,6 @@ angular
   function WishesController($log, $scope, Restangular, $state) {
     var vm = this;
     vm.wishes = [];
-    vm.obstacles = [];
 
     var allWishes = Restangular.all('wishes');
 

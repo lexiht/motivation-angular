@@ -11,8 +11,8 @@
       .state('home', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        controller: 'WishesController',
+        controllerAs: 'wishes'
       })
       .state('registration',{
         url: '/registration',

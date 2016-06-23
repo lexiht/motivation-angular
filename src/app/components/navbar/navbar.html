@@ -1,33 +1,33 @@
-<div class="mdl-layout__header-row">
-  <!-- Title -->
-  <span class="mdl-layout-title mdl-badge" data-badge="♥">Motivation</span>
+<nav>
+  <div class="nav-wrapper">
+    <a class="brand-logo left">Motivation</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="#">Home</a></li>
+      <li>
+        <div ng-hide=vm.isSigned()>
+          <a href="#/login">Login</a>
+        </div>
+      </li>
+      <li>
+        <div ng-hide=vm.isSigned()>
+          <a href="#/registration">Register</a>
+        </div>
+      </li>
+      <li>
+        <div ng-show="vm.isSigned()">
+          <a href="#/wishes">Add Wish</a>
+        </div>
+      </li>
+      <li>
+        <div ng-show="vm.isSigned()">
+          <a href="#" ng-click='vm.handleSignOutBtnClick()'>Sign out</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
   <!-- Add spacer, to align navigation to the right -->
-  <nav class="mdl-navigation mdl-layout--large-screen-only">
-    <a class="mdl-navigation__link" href="#">Home</a>
-
-    <div ng-hide=vm.isSigned()>
-      <a class="mdl-navigation__link" href="#/login">Login</a>
-    </div>
-
-    <div ng-hide=vm.isSigned()>
-      <a class="mdl-navigation__link" href="#/registration">Register</a>
-    </div>
-
-    <div ng-show="vm.isSigned()">
-      <a class="mdl-navigation__link" href="#/wishes">Add Wish</a>
-    </div>
-
-    <div ng-show="vm.isSigned()">
-      <button type="submit" ng-click='vm.handleSignOutBtnClick()'>Sign out</button>
-    </div>
-
-
-
-
-
-  </nav>
-  <!-- Add spacer, to align navigation to the right -->
-  <div class="mdl-layout-spacer"></div>
-  <!-- Navigation. We hide it in small screens. -->
+ <!--  <div class="mdl-layout-spacer"></div>
+  Navigation. We hide it in small screens. -->
 <!--   <span class="mdl-navigation__link">Application was created {{ vm.relativeDate }}.</span> -->
-</div>
+

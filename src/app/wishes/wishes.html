@@ -1,24 +1,21 @@
-<header class="mdl-layout__header">
+<header>
   <acme-navbar></acme-navbar>
 </header>
 
-<form role="form" ng-init="wishForm = {}">
-  <div class="form-group">
-    <label for="wish">Add a new wish:</label>
-    <input type="text" name="wish_text" ng-model="wishForm.wish_text" required="required" class="form-control">
-  </div>
+<div class="row">
+  <form class="col s6" role="form" ng-init="wishForm = {}">
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="Add a new wish" type="text" name="wish_text" ng-model="wishForm.wish_text" required="required">
+      </div>
+    </div>
 
-  <div class="form-group">
-    <label for="outcome">What is your outcome?</label>
-    <input type="text" name="outcome_text" ng-model="wishForm.outcome_text" required="required" class="form-control">
-  </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="What is your outcome?" type="text" name="outcome_text" ng-model="wishForm.outcome_text" required="required">
+      </div>
+    </div>
 
-  <button type="submit" class="btn btn-primary btn-lg" ng-click="wishes.createWish()">Add your wish</button>
-</form>
-
-<div ng-repeat="wish in wishes.wishes">
-  Wish: {{wish.wish_text}}<br>
-  Outcome: {{wish.outcome_text}}<br>
-  <edit-wish-form wishid="{{wish.id}}"> </edit-wish-form>
-  <add-obstacle-form wishid="{{wish.id}}"></add-obstacle-form>
+    <button class="waves-effect waves-light btn" type="submit" ng-click="wishes.createWish()">Add your wish</button>
+  </form>
 </div>

@@ -13,7 +13,7 @@
           $auth.submitLogin($scope.loginForm)
             .then(function() {
               alert('successful');
-              $location.path('/')
+              $location.path('/');
               // handle success response
             })
             .catch(function() {
