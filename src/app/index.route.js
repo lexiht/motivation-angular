@@ -32,14 +32,6 @@
         controller: 'WishesController',
         controllerAs: 'wishes'
       });
-      // .state('signout', {
-      //   url: '/signout',
-      //   templateUrl: 'app/navbar/navbar.html',
-      //   controller: 'SignoutController',
-      //   controllerAs: 'signout'
-      // });
-
-
     $urlRouterProvider.otherwise('/');
   }
 
