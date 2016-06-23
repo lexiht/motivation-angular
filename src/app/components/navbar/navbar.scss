@@ -1,3 +1,6 @@
+.mdl-layout__header-row {
+  background-color: #006bb3;
+}
 .acme-navbar-text{
   color: white;
 }
@@ -13,5 +16,15 @@ h1 {
 }
 
 a:hover, a:focus {
-  color: greenyellow;
+
+}
+
+.slogan {
+  text-align: right;bottom: center;
+  padding-top: 4%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.inset-text {
+    color: rgba(10,60,150, 0.8);
+    text-shadow: 1px 4px 6px #006bb3, 0 0 0 #000, 1px 4px 6px #006bb3;
 }
