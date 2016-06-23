@@ -30,7 +30,7 @@ gulp.task('default', ['clean'], function () {
 
 gulp.task('serveprod', function() {
   connect.server({
-    root: ["motivation-angular"],
+    root: ['/'],
     port: this.server.listen(process.env.PORT || port),
     livereload: false
   });

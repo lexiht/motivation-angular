@@ -51,7 +51,7 @@
   },
   "scripts": {
     "start": "node_modules/gulp/bin/gulp",
-    "postinstall": "gulp serveprod"
+    "postinstall": "gulp"
   },
   "devDependencies": {},
   "engines": {
