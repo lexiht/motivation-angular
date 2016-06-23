@@ -29,4 +29,4 @@ gulp.task('default', ['clean'], function () {
 });
 
 
-gulp.task('heroku:prod', [default]);
+gulp.tasks('heroku:prod', ['default']);
