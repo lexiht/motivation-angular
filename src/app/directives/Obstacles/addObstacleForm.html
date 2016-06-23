@@ -1,4 +1,4 @@
-<button ng-click="vm.isAddObstacleOpen = !vm.isAddObstacleOpen">Add Obstacle</button>
+<a class="waves-effect waves-light btn" ng-click="vm.isAddObstacleOpen = !vm.isAddObstacleOpen">Add Obstacle</a>
 <div ng-show="vm.isAddObstacleOpen">
   <form role="form" ng-init="addObstacleForm = {}">
     <div class="form-group">
@@ -10,17 +10,24 @@
       <label for="plan">Add plan to obstacle:</label>
       <input type="text" name="plan_text" ng-model="addObstacleForm.plan_text" required="required" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.addObstacle()">Submit Obstacle</button>
+    <a class="waves-effect waves-light btn" type="submit" class="btn btn-primary btn-lg" ng-click="vm.addObstacle()">Submit Obstacle</a>
   </form>
 </div>
 
 
-<button ng-click="vm.isShowObstacleOpen = !vm.isShowObstacleOpen">Show Obstacles</button>
-  <div ng-show="vm.isShowObstacleOpen">
-    <div ng-repeat="obstacle in vm.obstacles">
-      Obstacle: {{obstacle.obstacle_text}}<br>
-      Plan: {{obstacle.plan_text}}<br>
-      <streak wishid="{{obstacle.wish_id}}" obstacleid="{{obstacle.id}}"></streak>
-      <edit-obstacle-form wishid="{{obstacle.wish_id}}" obstacleid="{{obstacle.id}}"></edit-obstacle-form>
-    </div>
+<a class="waves-effect waves-light btn" ng-click="vm.isShowObstacleOpen = !vm.isShowObstacleOpen">Show Obstacles</a>
+      <div ng-show="vm.isShowObstacleOpen">
+            <div ng-repeat="obstacle in vm.obstacles">
+              <div class="row">
+                <div class="col s6">
+                  <span class="card-title">Obstacle: {{obstacle.obstacle_text}}</span><br>
+                  <span class="card-title">Plan: {{obstacle.plan_text}}</span><br>
+                  <edit-obstacle-form wishid="{{obstacle.wish_id}}" obstacleid="{{obstacle.id}}"></edit-obstacle-form>
+                </div>
+                <div class="col s6">
+                  <streak wishid="{{obstacle.wish_id}}" obstacleid="{{obstacle.id}}"></streak>
+                </div>
+            </div>
+        </div>
+  </div>
 </div>

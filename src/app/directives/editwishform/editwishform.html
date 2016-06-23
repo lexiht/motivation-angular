@@ -1,9 +1,9 @@
 
-<button ng-click="vm.isEditFormOpen = !vm.isEditFormOpen">Edit Wish</button>
-<button ng-click="vm.deleteWish()">Delete Wish</button>
+<a class="waves-effect waves-light btn" ng-click="vm.isEditFormOpen = !vm.isEditFormOpen">Edit Wish</a>
+<a class="waves-effect waves-light btn" ng-click="vm.deleteWish()">Delete Wish</a>
 <div ng-show="vm.isEditFormOpen">
   <form role="form" ng-init="wishEditForm = {}">
-    <div class="form-group">
+    <div class="form-group white-text">
       <label for="wish">Edit your wish:</label>
       <input type="text" name="wish_text" ng-model="wishEditForm.wish_text" required="required" class="form-control">
     </div>
@@ -12,6 +12,6 @@
       <label for="outcome">Edit your outcome:</label>
       <input type="text" name="outcome_text" ng-model="wishEditForm.outcome_text" required="required" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.editWish()">Submit change</button>
+    <a class="waves-effect waves-light btn" type="submit" class="btn btn-primary btn-lg" ng-click="vm.editWish()">Submit change</a>
   </form>
 </div>
