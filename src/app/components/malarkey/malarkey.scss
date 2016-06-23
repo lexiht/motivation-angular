@@ -2,10 +2,14 @@
   text-transform: capitalize;
   color: #cb3837;
 
+  text-align: center;
+  height: 80px;
+
   &:after {
     animation: cursor-blink 0.4s linear infinite;
     content: "|";
     color: #cb3837;
+
   }
 }
 
