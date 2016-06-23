@@ -23,7 +23,6 @@
       /** @ngInject */
       function editWishFormController($log, $scope, Restangular, $state) {
         var vm = this;
-
         vm.isEditFormOpen = false;
 
         Restangular.one('wishes', vm.wishid).get().then(function(resp){
