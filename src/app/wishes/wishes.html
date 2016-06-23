@@ -19,10 +19,3 @@
     <button class="waves-effect waves-light btn" type="submit" ng-click="wishes.createWish()">Add your wish</button>
   </form>
 </div>
-
-<div ng-repeat="wish in wishes.wishes">
-  Wish: {{wish.wish_text}}<br>
-  Outcome: {{wish.outcome_text}}<br>
-  <edit-wish-form wishid="{{wish.id}}"> </edit-wish-form>
-  <add-obstacle-form wishid="{{wish.id}}"></add-obstacle-form>
-</div>
