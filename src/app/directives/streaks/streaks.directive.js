@@ -24,22 +24,18 @@
       /** @ngInject */
       function StreaksController($log, $scope, Restangular, $state) {
         var vm = this;
-        vm.streakDays = 0;
 
-        Restangular.one('wishes',vm.wishid).one('obstacles',vm.obstacleid).all('streaks').getList().then(function(streaks){
-          vm.streaks = streaks;
-          $log.log(streaks);
-        });
+        var currentObstacle = Restangular.one('wishes',vm.wishid).one('obstacles',vm.obstacleid);
 
-
-        allStreaks.getList().then(function(resp){
+        currentObstacle.all('streaks').getList().then(function(resp){
+          $log.log(resp);
           vm.streakDays = countStreak(resp);
         });
 
         vm.isSuccessful = true;
 
         vm.submitResult = function(){
-          allStreaks.post(vm.isSuccessful);
+          currentObstacle.all('streaks').post($scope.recordProgressForm);
           $state.reload();
         };
 
@@ -47,7 +43,7 @@
           var streaks = streakArray.reverse();
           var count = 0;
           for(var i= 0; i<streaks.length; i++){
-            if (streaks[i] === true) {
+            if (streaks[i].completed === true) {
               count++;
             } else {
               break;

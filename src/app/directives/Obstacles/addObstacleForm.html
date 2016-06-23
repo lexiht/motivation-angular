@@ -20,7 +20,7 @@
     <div ng-repeat="obstacle in vm.obstacles">
       Obstacle: {{obstacle.obstacle_text}}<br>
       Plan: {{obstacle.plan_text}}<br>
-      <streak></streak>
+      <streak wishid="{{obstacle.wish_id}}" obstacleid="{{obstacle.id}}"></streak>
       <edit-obstacle-form wishid="{{obstacle.wish_id}}" obstacleid="{{obstacle.id}}"></edit-obstacle-form>
     </div>
 </div>
