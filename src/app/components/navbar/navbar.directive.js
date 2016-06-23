@@ -25,12 +25,12 @@
       var vm = this;
       vm.handleSignOutBtnClick = function() {
       $auth.signOut()
-        .then(function(resp) {
+        .then(function() {
           alert('successfully logged out');
           $location.path('/');
           // handle success response
         })
-        .catch(function(resp) {
+        .catch(function() {
           alert('log out failed');
           // handle error response
         });
@@ -45,26 +45,8 @@
       return false;
     };
 
-    
-
-      // "vm.creationDate" is available by directive option "bindToController: true"
     }
   }
 
-  // function SignoutController($location, $auth, $log, $scope) {
-  //   var vm = this;
-  //   vm.handleSignOutBtnClick = function() {
-  //     $auth.signOut()
-  //       .then(function(resp) {
-  //         alert('successfully logged out');
-  //         $location.path('/');
-  //         // handle success response
-  //       })
-  //       .catch(function(resp) {
-  //         alert('log out failed');
-  //         // handle error response
-  //       });
-  //   };
-  // }
 
 })();
