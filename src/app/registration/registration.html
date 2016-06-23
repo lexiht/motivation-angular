@@ -5,23 +5,23 @@
 <div class="row">
   <form class="col s6" role="form" ng-init="registrationForm = {}">
     <div class="row">
-      <div class="input-field col s6">
+      <div class="input-field col s6 offset-s9">
         <input placeholder="Email" type="email" name="email" ng-model="registrationForm.email" required="required"/>
       </div>
     </div>
 
     <div class="row">
-      <div class="input-field col s6">
+      <div class="input-field col s6 offset-s9">
         <input placeholder="Password" type="password" name="password" ng-model="registrationForm.password" required="required"/>
       </div>
     </div>
 
     <div class="row">
-      <div class="input-field col s6">
+      <div class="input-field col s6 offset-s9">
         <input placeholder="Password Confirmation" type="password" name="password_confirmation" ng-model="registrationForm.password_confirmation" required="required"/>
       </div>
     </div>
 
-    <button class="waves-effect waves-light btn" type="submit" ng-click="reg.doRegister() ">Register</button>
+    <button class="waves-effect waves-light btn col s6 offset-s9" type="submit" ng-click="reg.doRegister() ">Register</button>
   </form>
 </div>

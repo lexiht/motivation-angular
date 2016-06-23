@@ -2,27 +2,11 @@
   <div class="nav-wrapper">
     <a class="brand-logo left">Motivation</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="#">Home</a></li>
-      <li>
-        <div ng-hide=vm.isSigned()>
-          <a href="#/login">Login</a>
-        </div>
-      </li>
-      <li>
-        <div ng-hide=vm.isSigned()>
-          <a href="#/registration">Register</a>
-        </div>
-      </li>
-      <li>
-        <div ng-show="vm.isSigned()">
-          <a href="#/wishes">Add Wish</a>
-        </div>
-      </li>
-      <li>
-        <div ng-show="vm.isSigned()">
-          <a href="#" ng-click='vm.handleSignOutBtnClick()'>Sign out</a>
-        </div>
-      </li>
+      <li><a href="#">Your Wishes</a></li>
+      <li><a ng-hide="vm.isSigned()" href="#/login">Login</a></li>
+      <li><a ng-hide="vm.isSigned()" href="#/registration">Register</a></li>
+      <li><a ng-show="vm.isSigned()" href="#/wishes">Add Wish</a></li>
+      <li><a ng-show="vm.isSigned()" href="#" ng-click='vm.handleSignOutBtnClick()'>Sign out</a></li>
     </ul>
   </div>
 </nav>
@@ -30,4 +14,3 @@
  <!--  <div class="mdl-layout-spacer"></div>
   Navigation. We hide it in small screens. -->
 <!--   <span class="mdl-navigation__link">Application was created {{ vm.relativeDate }}.</span> -->
-

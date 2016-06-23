@@ -28,6 +28,7 @@
         .then(function() {
           alert('successfully logged out');
           $location.path('/');
+          $window.localStorage.removeItem("auth_headers");
           // handle success response
         })
         .catch(function() {
