@@ -1,1 +1,1 @@
-web: node node_modules/gulp/bin/gulp build -p $PORT
+web: node web.js -p $PORT
