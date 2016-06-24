@@ -1,19 +1,17 @@
 <form role='form' ng-init="recordProgressForm = {}">
-    <div class="card-content white-text" center>
-      Have you followed your plan today?</br>
-      <div class="radio white-text">
-        <label>
-            <input type="radio" name="completed" value="true" ng-model="recordProgressForm.completed">
-            <h6>Yes</h6>
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-            <input type="radio" name="completed" value="false" ng-model="recordProgressForm.completed">
-            <h6>I'll try harder nextime</h6>
-        </label>
-      </div>
-      <a class="waves-effect waves-light btn" ng-click='vm.submitResult()'>Submit</a></br>
-    </form>
-          <h6 bold>You are on a hot streak for {{vm.streakDays}} days!</h6>
-    </div>
+  <div class="card-content white-text" center>
+    Have you followed your plan today?</br>
+    <p>
+      <input type="radio" name="completed" value="true" ng-model="recordProgressForm.completed">
+      <label>Yes</label>
+    </p>
+    <p>
+      <input type="radio" name="completed" value="false" ng-model="recordProgressForm.completed">
+      <label>I'll try harder nextime</label>
+    </p>
+
+    <a class="waves-effect waves-light btn" ng-click='vm.submitResult()'>Submit</a></br>
+  </div>
+</form>
+
+<h6 bold>You are on a hot streak for {{vm.streakDays}} days!</h6>

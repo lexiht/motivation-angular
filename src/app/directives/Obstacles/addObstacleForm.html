@@ -1,14 +1,14 @@
 <a class="waves-effect waves-light btn" ng-click="vm.isAddObstacleOpen = !vm.isAddObstacleOpen">Add Obstacle</a>
-<div ng-show="vm.isAddObstacleOpen">
-  <form role="form" ng-init="addObstacleForm = {}">
-    <div class="form-group">
-      <label for="obstacle">Add Obstacle to wish:</label>
-      <input type="text" name="obstacle_text" ng-model="addObstacleForm.obstacle_text" required="required" class="form-control">
-    </div>
+<div class="row" ng-show="vm.isAddObstacleOpen">
+  <form class="col s12" role="form" ng-init="addObstacleForm = {}">
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="Add Obstacle to wish" type="text" name="obstacle_text" ng-model="addObstacleForm.obstacle_text" required="required">
+      </div>
 
-    <div class="form-group">
-      <label for="plan">Add plan to obstacle:</label>
-      <input type="text" name="plan_text" ng-model="addObstacleForm.plan_text" required="required" class="form-control">
+      <div class="input-field col s12">
+        <input placeholder="Add plan to obstacle" type="text" name="plan_text" ng-model="addObstacleForm.plan_text" required="required">
+      </div>
     </div>
     <a class="waves-effect waves-light btn" type="submit" class="btn btn-primary btn-lg" ng-click="vm.addObstacle()">Submit Obstacle</a>
   </form>
