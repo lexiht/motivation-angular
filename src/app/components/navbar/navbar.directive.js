@@ -27,12 +27,12 @@
       $auth.signOut()
         .then(function() {
           alert('successfully logged out');
-          $location.path('/');
           $window.localStorage.removeItem("auth_headers");
+          $location.path('/');
           // handle success response
         })
         .catch(function() {
-          alert('log out failed');
+          alert('log out failed. You are trapped forever');
           // handle error response
         });
 
