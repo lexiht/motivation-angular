@@ -6,9 +6,9 @@
     .factory('UserService', UserService);
 
     /** @ngInject */
-    function UserService(){
+    function UserService($window){
       return {
-        isLogged: false
+        isLogged: $window.localStorage.auth_headers || false
       };
     }
 
