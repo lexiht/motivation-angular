@@ -28,7 +28,6 @@
         var currentObstacle = Restangular.one('wishes',vm.wishid).one('obstacles',vm.obstacleid);
 
         currentObstacle.all('streaks').getList().then(function(resp){
-          $log.log(resp);
           vm.streakDays = countStreak(resp);
         });
 

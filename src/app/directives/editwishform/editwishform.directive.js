@@ -26,7 +26,6 @@
         vm.isEditFormOpen = false;
 
         Restangular.one('wishes', vm.wishid).get().then(function(resp){
-          $log.log(resp);
           vm.currentWish = resp;
         });
 
