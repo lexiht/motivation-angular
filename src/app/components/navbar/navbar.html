@@ -6,10 +6,10 @@
     </a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="#">Your Wishes</a></li>
-      <li><a ng-hide="vm.isSigned()" href="#/login">Login</a></li>
-      <li><a ng-hide="vm.isSigned()" href="#/registration">Register</a></li>
-      <li><a ng-show="vm.isSigned()" href="#/wishes">Add Wish</a></li>
-      <li><a ng-show="vm.isSigned()" href="#" ng-click='vm.handleSignOutBtnClick()'>Sign out</a></li>
+      <li><a ng-hide="vm.loginStatus" href="#/login">Login</a></li>
+      <li><a ng-hide="vm.loginStatus" href="#/registration">Register</a></li>
+      <li><a ng-show="vm.loginStatus" href="#/wishes">Add Wish</a></li>
+      <li><a ng-show="vm.loginStatus" href="#" ng-click='vm.handleSignOutBtnClick()'>Sign out</a></li>
     </ul>
   </div>
 </nav>
