@@ -21,30 +21,35 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($auth,$location,$window, $state) {
+    function NavbarController($auth,$location,$window, $state,UserService) {
       var vm = this;
+
+      vm.loginStatus = UserService.isLogged;
+
       vm.handleSignOutBtnClick = function() {
       $auth.signOut()
         .then(function() {
-          alert('successfully logged out');
           $window.localStorage.removeItem("auth_headers");
+          UserService.isLogged = false;
+          alert('successfully logged out');
           $state.reload();
           // handle success response
         })
         .catch(function() {
           alert('log out failed. You are trapped forever');
+          $state.reload();
           // handle error response
         });
 
       };
 
-      vm.isSigned = function() {
-        var isSigned =  $window.localStorage.auth_headers;
-        if (isSigned) {
-          return true;
-        }
-        return false;
-      };
+      // vm.isSigned = function() {
+      //   var isSigned =  $window.localStorage.auth_headers;
+      //   if (isSigned) {
+      //     return true;
+      //   }
+      //   return false;
+      // };
 
     }
   }
