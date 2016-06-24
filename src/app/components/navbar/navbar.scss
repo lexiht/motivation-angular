@@ -5,8 +5,17 @@
   color: white;
 }
 
-a {
-  color: black;
+.nav {
+  ul {
+    a {
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
+    padding: 0 10px;
+    color: black;
+    }
+  }
 }
 
 h1 {
@@ -15,6 +24,14 @@ h1 {
   line-height: 1.25em;
 }
 
+.motivation {
+  align-content: center;
+  font-size: 30px;
+  color: #fff;
+  display: inline-block;
+  line-height: 64px;
+  padding-right: 10px
+}
 // a:hover, a:focus {
 //   color: greenyellow;
 // }
@@ -29,7 +46,6 @@ h1 {
 }
 
 .test-logo {
-  height:60px;
-  width: 60px;
-  background-image:url("../src/assets/images/assembly.png");
+
+
 }
