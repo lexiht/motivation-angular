@@ -21,14 +21,14 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($auth,$location,$window) {
+    function NavbarController($auth,$location,$window, $state) {
       var vm = this;
       vm.handleSignOutBtnClick = function() {
       $auth.signOut()
         .then(function() {
           alert('successfully logged out');
           $window.localStorage.removeItem("auth_headers");
-          $location.path('/');
+          $state.reload();
           // handle success response
         })
         .catch(function() {
@@ -36,15 +36,15 @@
           // handle error response
         });
 
-    };
+      };
 
-    vm.isSigned = function() {
-      var isSigned =  $window.localStorage.auth_headers;
-      if (isSigned) {
-        return true ;
-      }
-      return false;
-    };
+      vm.isSigned = function() {
+        var isSigned =  $window.localStorage.auth_headers;
+        if (isSigned) {
+          return true;
+        }
+        return false;
+      };
 
     }
   }
