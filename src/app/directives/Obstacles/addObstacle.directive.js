@@ -38,7 +38,6 @@
                 vm.currentWish = resp;
             });
 
-            $log.log(vm.obstacleid);
 
 
 
