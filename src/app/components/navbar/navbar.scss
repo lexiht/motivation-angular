@@ -25,12 +25,10 @@ h1 {
 }
 
 .motivation {
-  align-content: center;
+  line-height: 64px;
   font-size: 30px;
   color: #fff;
   display: inline-block;
-  line-height: 64px;
-  padding-right: 10px
 }
 // a:hover, a:focus {
 //   color: greenyellow;
@@ -38,7 +36,7 @@ h1 {
 
 .nav-wrapper {
   .brand-logo {
-    padding-left: 4%;
+    padding-left: 0%;
   }
   li {
     line-height: 64px;
