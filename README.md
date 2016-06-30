@@ -1,7 +1,10 @@
 #Motivation-Frontend
 
-##Authors
-Lexi, Letian, Maria, Robin
+##Project team:
+* [Robin Heathcote](https://github.com/RobinHeathcote)
+* [Letian Wang](https://github.com/letianw91)
+* [Maria Romero](https://github.com/MariaRomero)
+* [Lexi Tran](https://github.com/lexiht)
 
 ##Technology
 + Framework: AngularJS
