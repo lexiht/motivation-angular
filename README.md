@@ -1,6 +1,6 @@
 #Motivation-Frontend
 
-Motivation-Angular is web app built in one week with a remote team of members from Australia, Vietnam and the UK.  Its aim is connect to our back-end [API](https://github.com/letianw91/Motivation) to help users reach their goals without requiring any effort through gentle nudges and reminders when they need them. Users will input their goals (known as wishes), state a desired outcome, and the create obstacles and plans to help them achieve their wish. This follows the WOOP psychological method.
+Motivation-Angular is web app built in one week with a remote team of members from Australia, Vietnam and the UK.  Its aim is connect to our back-end [API](https://github.com/RobinHeathcote/Motivation) to help users reach their goals without requiring any effort through gentle nudges and reminders when they need them. Users will input their goals (known as wishes), state a desired outcome, and the create obstacles and plans to help them achieve their wish. This follows the WOOP psychological method.
 
 Our MVP included a fully tested and functional API and a functional web app for users to interact with which was built using Angular.js.
 
