@@ -15,10 +15,12 @@ Our MVP included a fully tested and functional API and a functional web app for 
   + Routing: ui-router
   + Resource handler:Restangular
   + UI Framework: Materialize
+  + Ng-token auth
   + jQuery: 2.x
   + Unit Test: Karma
   + e2e test: Protractor
   + CSS pre-processor: Sass
+  + Materialize
   + JS pre-processor: none
   + HTML pre-processor: none
 + Generator: Yeoman + gulp-angular generator
